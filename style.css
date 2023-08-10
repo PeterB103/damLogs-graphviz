@@ -1,0 +1,202 @@
+/* global CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Title + Banner */
+#container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#title{
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+#banner {
+  background-color: black;
+  width: 100%;
+  height: 50px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+#parent {
+  display: flex;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;  /* Add some space below the inputs */
+}
+
+.input-pair {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+/* Control Panel + ~Graph */
+#controlPanel{
+  background-color: #F5F5DC;
+  display: flex; /* Add this line to create a flex container */
+}
+
+.panel-half {
+  flex: 1; /* Each child div will take up an equal amount of space */
+  padding: 10px; /* Add some padding for spacing */
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid black; /* Add a border to create a separation line */
+  overflow: auto;
+}
+
+#controlPanel, #graph {
+  flex-grow: 1;
+  overflow: auto;
+  height: 100%;
+}
+
+.inputLabel { /* label for input box*/ 
+  display: flex; /* Use flexbox for label */
+  align-items: center; /* Align items vertically within the label */
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+.numberInput { /* input box */
+  max-width: 60%; /* This will limit the maximum width to 50% of its parent container */
+  color: rgba(0,0,0,.87);
+  border-bottom-color: rgba(0,0,0,.42);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: .009375em;
+  text-decoration: inherit;
+  text-transform: inherit;
+  box-sizing: border-box;
+  padding: 20px 16px 6px;
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 4px 4px 0 0;
+  background: rgb(245, 245, 245);
+  height: 40px;
+  flex-grow: 1; /* Use flex-grow to expand the input box */
+  flex-basis: 0; /* Initial width before growing or shrinking */
+  flex-shrink: 1; /* Allows the item to shrink if necessary */
+  display: inline-block;
+  :hover{
+      border-bottom-color: rgba(0,0,0,.87);
+      background: #ececec;
+  }
+  :focus{
+      border-color: #6200ee;
+  }
+}
+
+#timeDisplay{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#infoDisplay{
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* You might need to adjust this value */
+}
+#text-area-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.textarea-half{
+  flex: 1;
+  width: 45%;
+  height: 100%;
+}
+
+/* table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  padding: 6px;
+  text-align: left;
+  font-size: 12px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+
+/* Class Styling */
+.customInput {
+  display: inline-block; /* Set display to inline-block */
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 0.75rem;
+  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.25rem 1.5rem;
+  margin-right: 20px; /* Add some right margin to the button */
+}
+
+button:hover {
+  background-color: lightgrey;
+}
+
+
+
+/* Split.js styles */
+.gutter {
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+  cursor: ew-resize;
+}

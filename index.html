@@ -1,0 +1,36 @@
+<!-- ACE Editor version -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id = "container">
+        <div id="banner"> 
+            <h1 id= "title"> DAM Log Database & Visualization </h1>
+            <button id="downloadBtn" class = "customInput"> Download SVG</button>
+        </div>
+ 
+        <div id = "parent">
+          <div id="controlPanel">
+            <iframe src="http://127.0.0.1:8080/nodes/query/" style="width: 100%; height: 100%;"></iframe>
+
+          </div>
+
+          <div id="graph"></div>
+        </div>
+    </div>
+
+    <!-- Update the HTML for the file input button -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/d3-graphviz@5.0.2/build/d3-graphviz.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/protobufjs/6.11.2/protobuf.min.js"></script>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="graphviz.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/split.js@1.6.2/dist/split.min.js"></script>
+  
+</body>
+</html>
